@@ -73,6 +73,7 @@ body {
 }
 
 #start-game, #guess-button {
+    margin: 1rem 0;
     padding: 10px 20px;
     font-size: 1em;
     background-color: #333;
