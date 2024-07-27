@@ -104,3 +104,135 @@ body {
     font-size: 1.2em;
     color: #d9534f; /* Red color for wrong guesses */
 }
+
+@media screen and (min-width: 425px){
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+    
+    #score {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+    
+    #game-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%; /* Adjust for smaller screens */
+        max-width: 800px;
+        margin: 20px 0;
+        border: 2px solid #333;
+        border-radius: 10px;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    #word-container, #hangman-container {
+        width: 100%; /* Full width for small screens */
+        text-align: center;
+    }
+    
+    #word-container {
+        font-size: 1.5em; /* Adjusted for smaller screens */
+        letter-spacing: 0.1em;
+        border-bottom: 2px solid #333; /* Changed border to bottom */
+        padding-bottom: 10px;
+    }
+    
+    #hangman-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #333;
+        background-color: #e9e9e9;
+        border-radius: 10px;
+        padding: 10px;
+        margin-top: 10px; /* Added margin for spacing */
+    }
+    
+    #hangman-canvas {
+        border: 1px solid #333;
+        width: 100%; /* Make canvas responsive */
+        height: auto; /* Keep aspect ratio */
+    }
+    
+    #setup {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    #word-input, #guess-input {
+        padding: 10px;
+        font-size: 1em;
+        border: 2px solid #333;
+        border-radius: 5px;
+        margin-right: 10px;
+        width: 100%; /* Full width for smaller screens */
+        box-sizing: border-box; /* Include padding and border in width */
+    }
+    
+    #guess-input {
+        margin-right: 0;
+    }
+    
+    #start-game, #guess-button {
+        padding: 10px 20px;
+        font-size: 1em;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        width: 100%; /* Full width for buttons */
+        box-sizing: border-box; /* Include padding and border in width */
+    }
+    
+    #start-game:hover, #guess-button:hover {
+        background-color: #555;
+    }
+    
+    #guess-fields {
+        text-align: center;
+        width: 100%; /* Full width for small screens */
+    }
+    
+    #wrong-guesses-container {
+        margin-top: 20px;
+        width: 100%; /* Full width for small screens */
+    }
+    
+    #wrong-guesses {
+        font-size: 1em; /* Adjust font size for smaller screens */
+        color: #d9534f; /* Red color for wrong guesses */
+    }
+    
+    /* Responsive adjustments for small screens */
+    @media (max-width: 600px) {
+        #word-container {
+            font-size: 1.2em; /* Smaller font size for small screens */
+        }
+        
+        #hangman-container {
+            flex-direction: column; /* Stack vertically */
+        }
+        
+        #hangman-canvas {
+            width: 90%; /* Adjust canvas width */
+            height: auto; /* Maintain aspect ratio */
+        }
+        
+        #word-input, #guess-input, #start-game, #guess-button {
+            font-size: 0.9em; /* Slightly smaller font size */
+        }
+    }
+    
+}
